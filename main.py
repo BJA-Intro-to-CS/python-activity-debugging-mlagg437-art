@@ -21,7 +21,10 @@ def update_stock(products, product_name, amount):
     updated_product = None
     for product in products:
         if product["name"] == product_name:
-            product["stock"] = int(product["stock"]) - amount
+            new_stock = int(product["stock"]) - amount
+            if new_stock < 0:
+                new_stock = 0
+            product["stock"] = new_stock
             updated_product = product
         break
     return updated_product
