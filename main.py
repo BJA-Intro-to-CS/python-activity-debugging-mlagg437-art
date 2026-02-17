@@ -60,7 +60,7 @@ print("Average price:", average)
 
 
 choice = "Pencil"
-quantity = 5
+quantity = 2
 
 for product in products:
     if product["name"] == choice:
